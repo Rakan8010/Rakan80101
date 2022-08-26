@@ -1,3 +1,5 @@
+package src;
+
 import infra.Application;
 
 public class Main {
