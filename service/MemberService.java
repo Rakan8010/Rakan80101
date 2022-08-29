@@ -1,6 +1,6 @@
 package service;
 
-import bata.Member;
+import data.Member;
 import infra.Container;
 import repository.MemberRepository;
 
@@ -35,4 +35,14 @@ public class MemberService {
     }
 
 
+    public Member getMemberByLoginId(String loginId) {
+        return memberRepository.getMemberByLoginId(loginId);
+    }
+
+    public void delete(String loginId) {
+
+        Member findMember = getMemberByLoginId(loginId);
+        memberRepository.delete(findMember);
+
+    }
 }

@@ -1,6 +1,6 @@
 package repository;
 
-import bata.Member;
+import data.Member;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,4 +34,8 @@ public class MemberRepository {
     }
 
 
+    public void delete(Member member) {
+        store.remove(member);
+    }
 }
+

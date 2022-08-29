@@ -52,6 +52,10 @@ public class Request {
         return uriParser.isValid();
     }
 
+    public String getOriginUri(){
+        return uriParser.getURI();
+    }
+
     public String getControllerCode() {
         return uriParser.getControllerCode();
     }
@@ -71,5 +75,11 @@ public class Request {
         Map<String, Object> parameter = uriParser.getParameter();
         return parameter.get(key).toString();
     }
-}
 
+    public boolean hasParam(String key){
+        // loginId, test
+        Map<String, Object> parameter = uriParser.getParameter();
+        return parameter.get(key) != null;
+
+    }
+}
